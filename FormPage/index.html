@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>FormPage</title>
+    </head>
+<body>
+  <div class="container">
+    <form id="surveyForm">
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+          <option value="USA">USA</option>
+          <option value="Canada">Canada</option>
+          <option value="UK">UK</option>
+        </select>
+      </div>
+    <div class="form-group">
+      <label>Gender:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="gender" value="Male"> Male</label>
+        <label><input type="checkbox" name="gender" value="Female"> Female</label>
+        <label><input type="checkbox" name="gender" value="Other"> Other</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="profession">Profession:</label>
+      <input type="text" id="profession" name="profession" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')" required>
+    </div>
+    <div class="form-group">
+      <label for="mobile">Mobile Number:</label>
+      <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" oninvalid="this.setCustomValidity('Please Enter valid mobile number')" oninput="setCustomValidity('')" required>
+    </div>
+    <div class="btn-group">
+      <button type="submit" class="btn">Submit</button>
+      <button type="button" class="btn btn-reset" onclick="resetForm()">Reset</button>
+    </div>
+    </form>
+   </div>
+   <script src="script.js"></script>
+</body>
+</html>
